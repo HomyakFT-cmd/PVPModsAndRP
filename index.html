@@ -1,124 +1,160 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>MineMods & Resources</title>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<style>
-  body {
-    margin: 0;
-    font-family: 'Press Start 2P', cursive;
-    /* Используем изображение для фона */
-    background-image: url('https://i.imgur.com/4d6k7hL.png'); /* изображение блоков Minecraft */
-    background-repeat: repeat; /* повторять по всему экрану */
-    background-size: 64px 64px; /* размер тайла */
-    background-color: #8fbc8f; /* цвет фона, если изображение не загрузится */
-    color: #333;
-  }
-  header {
-    background-color: rgba(76, 175, 80, 0.8);
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
-    color: white;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background-color: rgba(139, 69, 19, 0.8);
-    padding: 10px 0;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  .banner {
-    background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.1&auto=format&fit=crop&w=1470&q=80');
-    background-size: cover;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 24px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  }
-  .content {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  .mods-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-  .mod-card {
-    background-color: #fff;
-    border: 2px solid #4CAF50;
-    padding: 10px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
-  }
-  .mod-card:hover {
-    transform: scale(1.05);
-  }
-  .mod-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-  }
-  .download-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-    border-radius: 4px;
-  }
-</style>
+    <meta charset="UTF-8" />
+    <title>Похожий сайт Minecraft</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+        }
+        /* Верхняя панель */
+        .header {
+            background-color: #4CAF50;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu {
+            display: flex;
+            gap: 10px;
+        }
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 12px;
+            background-color: #388E3C;
+            border-radius: 4px;
+        }
+        /* Основной контент */
+        .content {
+            display: flex;
+            padding: 20px;
+        }
+        /* Боковая панель */
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        /* Основная часть */
+        .main {
+            flex: 1;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        /* Заголовки */
+        h2 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+        /* Элементы меню и рецептов */
+        .menu-item, .recipe {
+            background-color: #444;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        /* Поиск */
+        .search-box {
+            display: flex;
+            margin-top: 10px;
+        }
+        .search-box input {
+            flex: 1;
+            padding: 6px 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-box button {
+            padding: 6px 12px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        /* Иконки и квадраты */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-color: #888;
+            border: 1px solid #555;
+            border-radius: 4px;
+        }
+        /* Стиль для изображений */
+        .image-box {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .image-box img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        /* Общие стили */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-
-<header>
-  <h1>MineMods & Resources</h1>
-</header>
-
-<nav>
-  <a href="#">Главная</a>
-  <a href="#">Моды</a>
-  <a href="#">Ресурс-паки</a>
-  <a href="#">Популярное</a>
-  <a href="#">Новинки</a>
-  <a href="#">Контакты</a>
-</nav>
-
-<div class="banner">
-  Погрузись в мир Minecraft с нашими модами и ресурс-паками!
-</div>
-
-<div class="content">
-  <h2>Популярные моды</h2>
-  <div class="mods-section">
-    <div class="mod-card">
-      <img src="https://images.unsplash.com/photo-1612831197904-0b1a5a1c0f4d" alt="Мод 1" />
-      <h3>Мод Волшебный лес</h3>
-      <p>Добавляет новые деревья и магические существа.</p>
-      <a class="download-btn" href="#">Скачать</a>
+    <div class="header">
+        <div class="logo"><strong>Minecraft</strong> inside</div>
+        <div class="auth">
+            <a href="#">Войти</a> | <a href="#">Зарегистрироваться</a>
+        </div>
     </div>
-    <div class="mod-card">
-      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442" alt="Мод 2" />
-      <h3>Реализм и графика</h3>
-      <p>Улучшает графику и звуки.</p>
-      <a class="download-btn" href="#">Скачать</a>
+    <div class="content">
+        <div class="sidebar">
+            <h2>Меню</h2>
+            <div class="menu-item">Моды</div>
+            <div class="menu-item">Текстуры</div>
+            <div class="menu-item">Скины</div>
+            <div class="menu-item">Карты</div>
+            <div class="menu-item">Видео</div>
+            <div class="menu-item">Команды</div>
+            <div class="menu-item">Дата-паки</div>
+            <div class="menu-item">Сборки</div>
+        </div>
+        <div class="main">
+            <h2>Образец изображения</h2>
+            <div class="image-box">
+                <img src="https://via.placeholder.com/200x200.png?text=Minecraft+Character" alt="Minecraft Character" />
+            </div>
+            <p>Это пример сайта, похожего по стилю, с боковым меню и основной информацией.</p>
+            <h2>Рецепты</h2>
+            <div class="recipe">Оранжевый флаг</div>
+            <div class="icon-grid">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Поиск по сайту..." />
+                <button>Найти</button>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
+    <div class="footer">
+        &copy; 2023 Minecraft сайт
+    </div>
 </body>
 </html>
