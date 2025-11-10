@@ -2,11 +2,108 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Мой сайт о Модах и Ресурс-паках</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MineMods & Resources</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #87ceeb; /* небо */
+    color: #333;
+  }
+  header {
+    background-color: #4CAF50; /* блок из травы */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #8B4513; /* земля */
+    padding: 10px 0;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .banner {
+    background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.1&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+  }
+  .content {
+    padding: 20px;
+  }
+  .mods-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .mod-card {
+    background-color: #fff;
+    border: 2px solid #4CAF50;
+    padding: 10px;
+    text-align: center;
+  }
+  .mod-card img {
+    width: 100%;
+    height: auto;
+  }
+  .download-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+</style>
 </head>
 <body>
-<h1>Добро пожаловать на сайт о Minecraft!</h1>
-<p>Здесь будут моды и ресурс-паки для скачивания.</p>
+
+<header>
+  <h1>MineMods & Resources</h1>
+</header>
+
+<nav>
+  <a href="#">Главная</a>
+  <a href="#">Моды</a>
+  <a href="#">Ресурс-паки</a>
+  <a href="#">Популярное</a>
+  <a href="#">Новинки</a>
+  <a href="#">Контакты</a>
+</nav>
+
+<div class="banner">
+  Погрузись в мир Minecraft с нашими модами и ресурс-паками!
+</div>
+
+<div class="content">
+  <h2>Популярные моды</h2>
+  <div class="mods-section">
+    <div class="mod-card">
+      <img src="https://images.unsplash.com/photo-1612831197904-0b1a5a1c0f4d" alt="Мод 1" />
+      <h3>Мод Волшебный лес</h3>
+      <p>Добавляет новые деревья и магические существа.</p>
+      <a class="download-btn" href="#">Скачать</a>
+    </div>
+    <div class="mod-card">
+      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442" alt="Мод 2" />
+      <h3>Реализм и графика</h3>
+      <p>Улучшает графику и звуки.</p>
+      <a class="download-btn" href="#">Скачать</a>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
